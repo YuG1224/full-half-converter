@@ -1,0 +1,23 @@
+{
+  "name": "full-half-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuG1224/full-half-converter.git"
+  },
+  "author": "Yuji Yamaguchi <YuG1224@users.noreply.github.com> (https://blog.yug1224.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YuG1224/full-half-converter/issues"
+  },
+  "homepage": "https://github.com/YuG1224/full-half-converter#readme",
+  "dependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0"
+  }
+}
