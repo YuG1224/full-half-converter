@@ -1,0 +1,35 @@
+extends lib/layout.jade
+
+block head
+
+block content
+  .container
+    .row
+      article.col-xs-12.main
+        article
+          header.page-header
+            h1!= '全角半角変換ツール'
+
+        article
+          h4!= '変換前'
+          .col-xs-12
+            textarea.before(v-model='before')
+          h4!= '変換後'
+          .col-xs-12
+            textarea.after(v-model='after')
+          .col-xs-12
+            label
+              input(type='checkbox', v-model='toHankakuCase')
+              span!= '英数字'
+            label
+              input(type='checkbox', v-model='toHankanaCase')
+              span!= 'カナ'
+            label
+              input(type='checkbox', v-model='toHankakuSpace')
+              span!= '空白'
+          button.btn.btn-info.col-xs-6.col-xs-offset-3.copy(
+            data-clipboard-target='.after',
+            v-on:mouseleave='destroyTooltip'
+          )!= 'Copy'
+
+        article

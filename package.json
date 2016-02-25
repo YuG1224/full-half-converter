@@ -4,7 +4,8 @@
   "description": "",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nginx": "cp mauve.conf /etc/nginx/conf.d/ && nginx -s reload"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,28 @@
   },
   "homepage": "https://github.com/YuG1224/full-half-converter#readme",
   "dependencies": {
+    "autoprefixer": "^6.3.3",
+    "babelify": "^7.2.0",
+    "bootstrap": "^3.3.6",
+    "browserify": "^13.0.0",
+    "clipboard": "^1.5.8",
     "del": "^2.2.0",
-    "gulp": "^3.9.0"
+    "encoding-japanese": "^1.0.24",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-data": "^1.2.1",
+    "gulp-filter": "^3.0.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-stylus": "^2.3.0",
+    "gulp-webserver": "^0.9.1",
+    "jade": "^1.11.0",
+    "jquery": "^2.2.0",
+    "jstransformer-verbatim": "^1.0.0",
+    "poststylus": "^0.2.3",
+    "rucksack-css": "^0.8.5",
+    "run-sequence": "^1.1.5",
+    "vinyl-source-stream": "^1.1.0",
+    "vue": "^1.0.16"
   }
 }

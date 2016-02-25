@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>mauve</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+    <link rel="alternate" hreflang="ja" href="https://mauve.yug1224.com/">
+    <link rel="icon" type="image/png">
+    <link rel="apple-touch-icon">
+    <link rel="stylesheet" href="/css/index.css">
+    <!-- Google ウェブマスターツール-->
+    <!-- Google Analytics Tracking Code-->
+    <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'aaaaa', 'auto');
+ga('send', 'pageview');
+
+    </script>
+    <!-- OGP-->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="@YuG1224">
+    <meta property="og:title" content="mauve">
+    <meta property="og:description" content="mauve - 全角半角変換ツール">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://db.tt/1E6Yu2kp">
+    <meta property="og:url" content="https://mauve.yug1224.com/">
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#topHeader" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">mauve</a>
+        </div>
+        <div id="topHeader" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="https://blog.yug1224.com">blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <article class="col-xs-12 main">
+          <article>
+            <header class="page-header">
+              <h1>全角半角変換ツール</h1>
+            </header>
+          </article>
+          <article>
+            <h4>変換前</h4>
+            <div class="col-xs-12">
+              <textarea v-model="before" class="before"></textarea>
+            </div>
+            <h4>変換後</h4>
+            <div class="col-xs-12">
+              <textarea v-model="after" class="after"></textarea>
+            </div>
+            <div class="col-xs-12">
+              <label>
+                <input type="checkbox" v-model="toHankakuCase"><span>英数字</span>
+              </label>
+              <label>
+                <input type="checkbox" v-model="toHankanaCase"><span>カナ</span>
+              </label>
+              <label>
+                <input type="checkbox" v-model="toHankakuSpace"><span>空白</span>
+              </label>
+            </div>
+            <button data-clipboard-target=".after" v-on:mouseleave="destroyTooltip" class="btn btn-info col-xs-6 col-xs-offset-3 copy">Copy</button>
+          </article>
+          <article></article>
+        </article>
+      </div>
+    </div>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
