@@ -54,7 +54,7 @@ gulp.task('styles', () => {
 gulp.task('views', () => {
   return gulp.src('./src/views/index.jade')
     .pipe(data(() => {
-      let config = require('./src/config');
+      let config = require('./src/config.json');
       let options = {
         lang: 'ja',
         blog: config.blog,
