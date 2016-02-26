@@ -25,7 +25,7 @@ gulp.task('del', (done) => {
 // es to js
 gulp.task('scripts', () => {
   return browserify('./src/scripts/index.js', {debug: true})
-    .transform(babelify)
+    .transform(babelify, {presets: ['es2015']})
     .bundle()
     .pipe(source('index.js'))
     .pipe(gulp.dest('./dist/js/'));
