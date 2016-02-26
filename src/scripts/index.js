@@ -49,12 +49,12 @@ let vm = new Vue({
     destroyTooltip: function(e){
       $(e.fromElement).tooltip('destroy');
     }
+  },
+  ready: function(){
+    clipboard.on('success', (e) => {
+      this.showTooltip(e.trigger, 'Coppied!');
+    });
   }
 });
-
-clipboard.on('success', (e) => {
-  vm.showTooltip(e.trigger, 'Coppied!');
-});
-
 
 module.exports = vm;
