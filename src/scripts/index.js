@@ -8,7 +8,7 @@ const Encoding = require('encoding-japanese');
 const Clipboard = require('clipboard');
 const clipboard = new Clipboard('.copy');
 
-let vm = new Vue({
+let vm = window.vm = new Vue({
   el: '.main',
   data: {
     before: '',
@@ -52,7 +52,7 @@ let vm = new Vue({
   },
   ready: function(){
     clipboard.on('success', (e) => {
-      this.showTooltip(e.trigger, 'Coppied!');
+      vm.showTooltip(e.trigger, 'Coppied!');
     });
   }
 });
